@@ -26,11 +26,6 @@ div.notion-topbar-mobile > div:nth-child(1n).toggle-mode {
   display: none !important;
 }
 
-/* Hide title */
-.notion-frame > .notion-scroller > .whenContentEditable > :nth-child(3) {
-  display: none !important
-}
-
 @media screen and (max-width: 900px) {
   .notion-page-content {
     padding-left: 20px !important;

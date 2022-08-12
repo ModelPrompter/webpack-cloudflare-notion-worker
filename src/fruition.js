@@ -89,7 +89,9 @@ async function fetchAndApply(request) {
     return response;
   }
   let response;
-  if (url.pathname.startsWith('/app') && url.pathname.endsWith('js')) {
+
+  // @see Fixed to show tweets https://github.com/stephenou/fruitionsite/pull/94
+  if (url.pathname.endsWith('js')) {
     response = await fetch(url.toString());
     let body = await response.text();
     response = new Response(body.replace(/www.notion.so/g, MY_DOMAIN).replace(/notion.so/g, MY_DOMAIN), response);
