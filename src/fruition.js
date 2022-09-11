@@ -18,7 +18,7 @@ const SLUG_TO_PAGE = {
 
 /* Step 3: enter your page title and description for SEO purposes */
 const PAGE_TITLE = 'Everest Wonder';
-const PAGE_DESCRIPTION = 'This site documents an attempt to create a financially stable lifestyle around independent research and long form creative coding. fxhash 🪙 generative art 🖼️ vaporwave 🌇 midjourney 🤖';
+const PAGE_DESCRIPTION = 'Exploring ways to use AI for creative expression…welcome to my digital garden ✨🧑‍💻 Made Handsfree.js, Layers.p5, and now DiffusionKit';
 
 /* Step 4: enter a Google Font name, you can choose from https://fonts.google.com */
 const GOOGLE_FONT = '';
