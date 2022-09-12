@@ -11,7 +11,7 @@ const MY_DOMAIN = 'everestwonder.com';
   */
 const SLUG_TO_PAGE = {
   '': '3ff6f1d27dcc45289e8a78126d5c2aa4',
-  'diffution-blocks': 'b61479b8b1044f14b3cf558d86a86d57',
+  'diffusion-blocks': 'b61479b8b1044f14b3cf558d86a86d57',
   'dailies': '148011ce332d45a484daf30a15376761?v=6069f3572fb1412383f954aa6d9eac54'
 };
 
