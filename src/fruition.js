@@ -1,8 +1,8 @@
 /* CONFIGURATION STARTS HERE */
-import stylesCSS from 'raw-loader!./styles/main.css';
+import stylesCSS from './styles/main.css';
 
 /* Step 1: enter your domain name like fruitionsite.com */
-const MY_DOMAIN = 'everestwonder.com';
+const MY_DOMAIN = 'blog.modelprompter.com';
 
 /*
   * Step 2: enter your URL slug to page ID mapping
@@ -10,14 +10,16 @@ const MY_DOMAIN = 'everestwonder.com';
   * The value on the right is the Notion page ID
   */
 const SLUG_TO_PAGE = {
-  '': '3ff6f1d27dcc45289e8a78126d5c2aa4',
-  'diffusion-blocks': 'b61479b8b1044f14b3cf558d86a86d57',
-  'dailies': '148011ce332d45a484daf30a15376761?v=6069f3572fb1412383f954aa6d9eac54'
+  '': '0d1872f91470464189abc4386074965c',
+  'documentation': '239130cf2a9145828ae13312b3c2a951',
+  'community': '96c28befba174074aba3a5f5f38ed071',
+  'startup': '1a2a1f436a2d4ce3936e5b88a57537c6',
+  'oz': '49a59f3b3d694a4c91dc252efb893ab6'
 };
 
 /* Step 3: enter your page title and description for SEO purposes */
-const PAGE_TITLE = 'Everest Wonder';
-const PAGE_DESCRIPTION = 'Exploring ways to use AI for creative expression…welcome to my digital garden ✨🧑‍💻 Made Handsfree.js, Layers.p5, and now DiffusionKit';
+const PAGE_TITLE = 'Model Prompter';
+const PAGE_DESCRIPTION = 'Connect AI models & web services together ✨🧑‍💻✨';
 
 /* Step 4: enter a Google Font name, you can choose from https://fonts.google.com */
 const GOOGLE_FONT = '';

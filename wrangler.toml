@@ -1,5 +1,6 @@
-name = "everestwonder"
+name = "modelprompter"
 type = "webpack"
 account_id = "0f0adf4fa5c287198daefdc1c659f58d"
 workers_dev = true
 webpack_config = "webpack.config.js"
+compatibility_date = "2022-11-12"

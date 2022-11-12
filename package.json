@@ -5,8 +5,8 @@
   "description": "A template for kick starting a Cloudflare Workers project",
   "main": "./index.js",
   "scripts": {
-    "start": "wrangler dev",
-    "publish": "wrangler publish",
+    "start": "wrangler dev index.js",
+    "publish": "wrangler publish index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write '**/*.{js,css,json,md}'"
   },
