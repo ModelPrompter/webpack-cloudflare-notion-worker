@@ -1,5 +1,5 @@
 /* CONFIGURATION STARTS HERE */
-import stylesCSS from './styles/main.css';
+import stylesCSS from './styles/main.css.js';
 
 /* Step 1: enter your domain name like fruitionsite.com */
 const MY_DOMAIN = 'blog.modelprompter.com';
@@ -126,6 +126,7 @@ async function fetchAndApply(request) {
     response = new Response(response.body, response);
     response.headers.delete('Content-Security-Policy');
     response.headers.delete('X-Content-Security-Policy');
+    response.headers.delete('X-Frame-Options')
   }
 
   return appendJavascript(response, SLUG_TO_PAGE);
@@ -167,19 +168,7 @@ class HeadRewriter {
         html: true
       });
     }
-    element.append(`<style>
-    div.notion-topbar > div > div:nth-child(3) { display: none !important; }
-    div.notion-topbar > div > div:nth-child(4) { display: none !important; }
-    div.notion-topbar > div > div:nth-child(5) { display: none !important; }
-    div.notion-topbar > div > div:nth-child(6) { display: none !important; }
-    div.notion-topbar-mobile > div:nth-child(3) { display: none !important; }
-    div.notion-topbar-mobile > div:nth-child(4) { display: none !important; }
-    div.notion-topbar > div > div:nth-child(1n).toggle-mode { display: block !important; }
-    div.notion-topbar-mobile > div:nth-child(1n).toggle-mode { display: block !important; }
-
-    ${stylesCSS}
-
-    </style>`, {
+    element.append(`<style id="custom-styles">${stylesCSS}</style>`, {
       html: true
     })
   }

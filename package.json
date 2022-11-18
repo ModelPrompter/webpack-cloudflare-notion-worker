@@ -13,8 +13,6 @@
   "author": "Oz Ramos <labofoz@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
-    "prettier": "^1.18.2",
     "raw-loader": "^4.0.2"
   }
 }
