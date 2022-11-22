@@ -43,19 +43,6 @@ const CUSTOM_SCRIPT = `;
       }
     })
   })
-
-  // Send "load" message to parent onload
-  const sendLoadMessage = () => {
-    const message = {
-      type: 'load'
-    }
-    window.parent.postMessage(message, '*')
-  }
-
-  document.addEventListener('DOMContentLoaded', sendLoadMessage)
-  if (document.readyState === 'interactive' || document.readyState === 'complete') {
-    sendLoadMessage()
-  }
 })()
 ;`;
 
