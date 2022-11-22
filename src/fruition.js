@@ -25,7 +25,26 @@ const PAGE_DESCRIPTION = 'Connect AI models & web services together ✨🧑‍�
 const GOOGLE_FONT = '';
 
 /* Step 5: enter any custom scripts you'd like */
-const CUSTOM_SCRIPT = ``;
+const CUSTOM_SCRIPT = `;
+(function () {
+  // Link click handler
+  document.addEventListener('click', function (event) {
+    const path = event.path
+    path.unshift(event.target)
+    
+    path.some($el => {
+      if ($el.tagName === 'A' && $el.href) {
+        const message = {
+          type: 'navigation',
+          url: $el.href
+        }
+        window.parent.postMessage(message, '*')
+        return true
+      }
+    })
+  })
+})()
+;`;
 
 /* CONFIGURATION ENDS HERE */
 
@@ -275,7 +294,9 @@ class BodyRewriter {
       arguments[1] = arguments[1].replace('${MY_DOMAIN}', 'www.notion.so');
       return open.apply(this, [].slice.call(arguments));
     };
-  </script>${CUSTOM_SCRIPT}`, {
+
+    ${CUSTOM_SCRIPT}
+  </script>`, {
       html: true
     });
   }
