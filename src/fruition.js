@@ -43,6 +43,19 @@ const CUSTOM_SCRIPT = `;
       }
     })
   })
+
+  // Send "load" message to parent onload
+  const sendLoadMessage = () => {
+    const message = {
+      type: 'load'
+    }
+    window.parent.postMessage(message, '*')
+  }
+
+  document.addEventListener('DOMContentLoaded', sendLoadMessage)
+  if (document.readyState === 'interactive' || document.readyState === 'complete') {
+    sendLoadMessage()
+  }
 })()
 ;`;
 
@@ -187,9 +200,8 @@ class HeadRewriter {
         html: true
       });
     }
-    element.append(`<style id="custom-styles">${stylesCSS}</style>`, {
-      html: true
-    })
+
+    element.append(`<style id="custom-styles">${stylesCSS}</style>`, {html: true})
   }
 }
 
@@ -198,7 +210,7 @@ class BodyRewriter {
     this.SLUG_TO_PAGE = SLUG_TO_PAGE;
   }
   element(element) {
-    element.append(`<div style="display:none">Powered by <a href="http://fruitionsite.com">Fruition</a></div>
+    element.append(`
     <script>
     window.CONFIG.domainBaseUrl = 'https://${MY_DOMAIN}';
     const SLUG_TO_PAGE = ${JSON.stringify(this.SLUG_TO_PAGE)};
